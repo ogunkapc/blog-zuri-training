@@ -1,15 +1,9 @@
 from django.db import models
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
 
 # Create your models here.
-
-
-class User(models.Model):
-    username = models.CharField(max_length=30)
-
-    def __str__(self) -> str:
-        return self.username
-
-
 class Post(models.Model):
     Title = models.CharField(max_length=200)
     Text = models.TextField()
